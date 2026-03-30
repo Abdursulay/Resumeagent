@@ -1,3 +1,12 @@
+from fastapi import FastAPI, HTTPException, File, UploadFile, Form
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from workflows.matching_flow import app as graph_app
+from langchain_core.messages import HumanMessage, ToolMessage
+import re
+import ast
+import PyPDF2
+import io
 import os
 import sys
 from pathlib import Path
@@ -7,17 +16,17 @@ project_root = Path(__file__).resolve().parent.parent
 if str(project_root) not in sys.path:
     sys.path.append(str(project_root))
 
-from fastapi import FastAPI, HTTPException, File, UploadFile, Form
-from pydantic import BaseModel
-from workflows.matching_flow import app as graph_app
-from langchain_core.messages import HumanMessage, ToolMessage
-import re
-import ast
-import PyPDF2
-import io
-
 # Initialize FastAPI
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
