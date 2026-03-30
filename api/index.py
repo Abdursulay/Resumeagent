@@ -42,8 +42,8 @@ except Exception as e:
 app = FastAPI()
 
 # Verify API Keys on startup
-if not Config.GROQ_API_KEY:
-    logger.warning("GROQ_API_KEY is missing! Vercel functions will likely fail.")
+if not Config.HUGGINGFACEHUB_API_TOKEN:
+    logger.warning("HUGGINGFACEHUB_API_TOKEN is missing! Vercel functions will likely fail.")
 
 # Add CORS middleware
 app.add_middleware(

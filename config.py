@@ -5,5 +5,5 @@ load_dotenv()
 
 class Config:
     MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
-    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+    HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
     SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")

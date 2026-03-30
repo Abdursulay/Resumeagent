@@ -1,6 +1,6 @@
 langgraph
 langchain
-langchain-groq
+langchain-huggingface
 langchain-community
 python-dotenv
 fastapi
