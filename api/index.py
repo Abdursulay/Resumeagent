@@ -32,7 +32,7 @@ except Exception as e:
     # We still need to define 'app' so Vercel doesn't fail basic routing
     from fastapi import FastAPI
     app = FastAPI()
-    @app.all("/")
+    @app.get("/")
     async def startup_error():
         return {"error": "Backend initialization failed", "details": str(e)}
     # Re-raise for Vercel to see the failure in logs
