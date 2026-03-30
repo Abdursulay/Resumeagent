@@ -9,15 +9,15 @@ This document summarizes the development and verification process for the Resume
 - **Micro-animations**: Integrated `framer-motion` and `tw-animate-css` for premium transitions.
 - **Premium Components**: Custom implementations of `Badge` and `Progress` components to match the minimalist aesthetic.
 
-### 2. Backend & API
-- **PDF Extraction**: Modified the FastAPI `/analyze` endpoint to accept PDF uploads and extract text using `PyPDF2`.
-- **Structured Response**: Improved the parser to provide consistent JSON outputs for matching scores, reasoning, and learning plans.
-- **LangGraph Integration**: Established a robust connection between the frontend and the agentic workflow.
+### 2. Backend & LLM Migration
+- **Hugging Face Integration**: Successfully migrated from Groq to `mistralai/Mistral-7B-Instruct-v0.3` for robust tool-calling.
+- **Vercel Path Bootstrap**: Implemented a `sys.path` fix in `api/index.py` for reliable module resolution in serverless environments.
+- **CORS & Diagnostics**: Added CORS middleware and startup-time error catching to eliminate "FUNCTION_INVOCATION_FAILED" errors.
 
 ### 3. Functional Fixes
-- **App Router Compatibility**: Fixed `page.tsx` by adding `"use client"` and resolving the `next/head` issue.
-- **Payload Alignment**: Corrected the mismatch between the frontend's `FormData` and the backend's expected structure.
-- **Environment Resolution**: Fixed the Node.js PATH issue by updating the system environment variables.
+- **App Router Compatibility**: Resolved Client Component and Metadata conflicts in `page.tsx`.
+- **Payload Alignment**: Fixed the discrepancy between frontend `FormData` and backend expectations.
+- **Environment Automation**: Configured system-wide PATH for Node.js and automated venv dependency management.
 
 ---
 
