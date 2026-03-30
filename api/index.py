@@ -1,23 +1,49 @@
-from fastapi import FastAPI, HTTPException, File, UploadFile, Form
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from workflows.matching_flow import app as graph_app
-from langchain_core.messages import HumanMessage, ToolMessage
-import re
-import ast
-import PyPDF2
-import io
 import os
 import sys
+import logging
 from pathlib import Path
+
+# Setup basic logging to catch Vercel stdout/stderr
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Add the project root to sys.path so Vercel can find 'workflows', 'agents', etc.
 project_root = Path(__file__).resolve().parent.parent
 if str(project_root) not in sys.path:
     sys.path.append(str(project_root))
 
+try:
+    from fastapi import FastAPI, HTTPException, File, UploadFile, Form
+    from fastapi.middleware.cors import CORSMiddleware
+    from pydantic import BaseModel
+    from workflows.matching_flow import app as graph_app
+    from langchain_core.messages import HumanMessage, ToolMessage
+    import re
+    import ast
+    import PyPDF2
+    import io
+    from config import Config
+    
+    logger.info("Successfully imported all backend modules.")
+except Exception as e:
+    import traceback
+    error_msg = f"CRITICAL: Failed to initialize backend modules during cold start:\n{traceback.format_exc()}"
+    print(error_msg)
+    # We still need to define 'app' so Vercel doesn't fail basic routing
+    from fastapi import FastAPI
+    app = FastAPI()
+    @app.all("/")
+    async def startup_error():
+        return {"error": "Backend initialization failed", "details": str(e)}
+    # Re-raise for Vercel to see the failure in logs
+    raise
+
 # Initialize FastAPI
 app = FastAPI()
+
+# Verify API Keys on startup
+if not Config.GROQ_API_KEY:
+    logger.warning("GROQ_API_KEY is missing! Vercel functions will likely fail.")
 
 # Add CORS middleware
 app.add_middleware(
