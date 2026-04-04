@@ -1,0 +1,93 @@
+[
+  {
+    "email": "test+1775082356@example.com",
+    "passwordHash": "$2b$10$.cfX7NxbPw1fy8G6W2LC/.jfdMlipAgrcjeQt1BJ38ZGDDETnrkZq",
+    "verified": false,
+    "verification": {
+      "code": "457946",
+      "expires": 1775083256930
+    },
+    "createdAt": "2026-04-01T22:25:56.930Z"
+  },
+  {
+    "email": "test+1775082697@example.com",
+    "passwordHash": "$2b$10$PwXdv9T7Q4GZBEZvLafG1e0vxdxLojvglC9n0wfvIoUu3PZ/2PAZ6",
+    "verified": true,
+    "createdAt": "2026-04-01T22:31:38.111Z"
+  },
+  {
+    "email": "sulaymanakanji001@gmail.com",
+    "passwordHash": "$2b$10$WiFltdjX9LwFkjocOrg1jepYcoPzwGtyYeOUn6B2NYdk9z4KO3Tz6",
+    "verified": false,
+    "verification": {
+      "code": "909738",
+      "expires": 1775083937764
+    },
+    "createdAt": "2026-04-01T22:37:17.764Z"
+  },
+  {
+    "name": "Test",
+    "email": "test2@example.com",
+    "passwordHash": "$2b$10$.S.jexJI4tYob651ZUNG1OBVwSqdDwy4n1ULo5da/m3vpz8nwyNLu",
+    "verified": false,
+    "verification": {
+      "code": "120316",
+      "expires": 1775084929460
+    },
+    "createdAt": "2026-04-01T22:53:49.460Z"
+  },
+  {
+    "name": "Sam",
+    "email": "sam+test123@example.com",
+    "passwordHash": "$2b$10$O8q2vFMa/A3bis3MsyEs.OPmcUVUq3gO0vyWTgMoAF83dDOEl9ok2",
+    "verified": true,
+    "createdAt": "2026-04-01T22:58:26.736Z"
+  },
+  {
+    "name": "test+1775086198",
+    "email": "test+1775086198@example.com",
+    "passwordHash": "$2b$10$c9Y6eqtnvmLpR4ZLTUb8RuvOB25GYtc1iwnYsQ/wbDZ7P5JgYFGLq",
+    "verified": true,
+    "createdAt": "2026-04-01T23:30:03.728Z"
+  },
+  {
+    "name": "test+1775264868",
+    "email": "test+1775264868@example.com",
+    "passwordHash": "$2b$10$lCCADn/7mRYOi2DaPJsDb.fdpPAzwo/mRyV0EH2Z7LtfSp84BcZCK",
+    "verified": false,
+    "verification": {
+      "code": "165291",
+      "expires": 1775265771758
+    },
+    "createdAt": "2026-04-04T01:07:51.758Z"
+  },
+  {
+    "name": "test+1775264899",
+    "email": "test+1775264899@example.com",
+    "passwordHash": "$2b$10$etpl1AZ3qtPJhwbQUxMwoez3Bk7gDI9bDkBWMax039JAKJykh8/56",
+    "verified": false,
+    "verification": {
+      "code": "817746",
+      "expires": 1775265800027
+    },
+    "createdAt": "2026-04-04T01:08:20.027Z"
+  },
+  {
+    "name": "test+1775264926",
+    "email": "test+1775264926@example.com",
+    "passwordHash": "$2b$10$dMAtjuIRCaO5Qx3Mb53cO.crqucm3elM8rXqQvSf8lxlPGY6zSi3G",
+    "verified": false,
+    "verification": {
+      "code": "284947",
+      "expires": 1775265826719
+    },
+    "createdAt": "2026-04-04T01:08:46.719Z"
+  },
+  {
+    "name": "test+1775265101",
+    "email": "test+1775265101@example.com",
+    "passwordHash": "$2b$10$Khf/dVwcNXtbvdbMWo6XreH5YNJqxp3bxZszeErX85ykYkVGqyNS.",
+    "verified": true,
+    "createdAt": "2026-04-04T01:11:43.962Z"
+  }
+]

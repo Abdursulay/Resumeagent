@@ -1,0 +1,12 @@
+[
+  {
+    "email": "test+1775082356@example.com",
+    "passwordHash": "$2b$10$.cfX7NxbPw1fy8G6W2LC/.jfdMlipAgrcjeQt1BJ38ZGDDETnrkZq",
+    "verified": false,
+    "verification": {
+      "code": "457946",
+      "expires": 1775083256930
+    },
+    "createdAt": "2026-04-01T22:25:56.930Z"
+  }
+]
